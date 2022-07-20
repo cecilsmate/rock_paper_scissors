@@ -23,19 +23,24 @@ function getPlayerselection(){
     return playerSelection;
 }
 playerSelection = getPlayerselection();
-
+console.log(playRound(playerSelection, computerSelection));
 //Write playRound function to take two paramers playerSelection and computerSelection
 function playRound(playerSelection, computerSelection){
-    if (playerSelection === 1){
-       if (computerSelection === 1){
-        console.log('You both chose rock! It\'s a tie.');
-       } else if (computerSelection === 2){
-        console.log('You lose! Paper beats rock.');
-       } else if (computerSelection === 3){
-        console.log('You win! Rock beats paper.');
-       }
-    }else console.log('I haven\'t finished this part yet');
-    }
-
-    console.log(playerSelection);
-    console.log(computerSelection);
+    if (playerSelection === 1 && computerSelection === 1){
+        console.log('Computer also chose rock!  It\'s a tie.');
+    }else if (playerSelection === 1 && computerSelection === 2){
+        console.log('Compter chose paper, you lose! Paper covers rock.');
+    }else if (playerSelection === 1 && computerSelection === 3){
+        console.log('Computer chose scissors, you win! Rock beats scissors.');
+    }else if (playerSelection === 2 && computerSelection === 1){
+        console.log('Computer chose rock, you win! Paper covers rock.');
+    }else if (playerSelection === 2 && computerSelection === 2){
+        console.log('Computer also chose paper! It\'s a tie');
+    }else if (playerSelection === 2 && computerSelection === 3){
+        console.log('Computer chose scissors, you lose! Scissors cut paper');
+    }else if (playerSelection === 3 && computerSelection === 1){
+        console.log('Computer chose rock, you lose! Rock beats paper.');
+    }else if (playerSelection === 3 && computerSelection === 2){
+        console.log('Computer chose paper, you win! Scissors cut paper.');
+    }else {console.log('Computer also chose scissors! It\'s a tie.')}
+}
