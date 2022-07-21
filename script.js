@@ -1,11 +1,10 @@
 computerSelection = getComputerchoice();
 
-playerSelection = getPlayerselection();
-
+let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
-console.log(game(playRound(playerSelection,computerSelection)));
+console.log(game());
 
 
 
@@ -20,8 +19,8 @@ function game (){
     if (computerScore > playerScore){
         console.log('Computer wins!');
     }else{console.log("You win!");}
-    console.log(computerScore);
-    console.log(playerScore)
+    console.log('Computer score is ' + computerScore);
+    console.log('Your score is ' + playerScore)
 }
 
 
